@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { 
-  Mail, MapPin, Phone, ShieldCheck, ChevronRight, 
+  MapPin, Phone, ShieldCheck, ChevronRight, 
   ChevronLeft, Building2, ExternalLink 
 } from "lucide-react";
 
@@ -166,7 +166,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* گریدبندی تغییر کرد تا 5 ستونه شود و جا برای اکوسیستم باز شود */}
+        {/* گریدبندی 5 ستونه */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
           
           {/* ================= بخش اول: معرفی برند و اطلاعات حقوقی (ستون 1 و 2) ================= */}
@@ -275,18 +275,16 @@ export default function Footer() {
                 <span className="mt-1.5 group-hover:text-white transition-colors">{t.address}</span>
               </li>
               
-              <li className="flex items-center space-x-4 rtl:space-x-reverse group cursor-default">
-                <div className="p-2 rounded-xl bg-zinc-900/50 border border-zinc-800 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-colors flex-shrink-0">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                </div>
-                <span className="group-hover:text-white transition-colors">support@safiagency.com</span>
-              </li>
-              
-              <li className="flex items-center space-x-4 rtl:space-x-reverse group cursor-default">
-                <div className="p-2 rounded-xl bg-zinc-900/50 border border-zinc-800 group-hover:border-emerald-500/50 group-hover:bg-emerald-500/10 transition-colors flex-shrink-0">
-                  <Phone className="w-4 h-4 text-emerald-400" />
-                </div>
-                <span className="group-hover:text-white transition-colors">{t.wa}</span>
+              <li>
+                <Link 
+                  href={`/${currentLangCode}/contact`}
+                  className="flex items-center space-x-4 rtl:space-x-reverse group"
+                >
+                  <div className="p-2 rounded-xl bg-zinc-900/50 border border-zinc-800 group-hover:border-emerald-500/50 group-hover:bg-emerald-500/10 transition-colors flex-shrink-0">
+                    <Phone className="w-4 h-4 text-emerald-400" />
+                  </div>
+                  <span className="group-hover:text-white transition-colors">{t.wa}</span>
+                </Link>
               </li>
 
             </ul>
