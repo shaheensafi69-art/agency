@@ -25,8 +25,8 @@ export default function RootLayout({
         {/* هدر در بالای تمام صفحات */}
         <Header />
         
-        {/* محتوای اصلی صفحات که کل فضای خالی را پر می‌کند */}
-        <main className="flex-grow">
+        {/* محتوای اصلی صفحات با افزودن pt-24 برای جلوگیری از رفتن متن‌ها زیر هدر */}
+        <main className="flex-grow pt-24">
           {children}
         </main>
         
